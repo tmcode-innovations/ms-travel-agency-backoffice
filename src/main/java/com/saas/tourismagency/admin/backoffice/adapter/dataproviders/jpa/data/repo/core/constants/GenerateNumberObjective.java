@@ -1,0 +1,54 @@
+package com.saas.tourismagency.admin.backoffice.adapter.dataproviders.jpa.data.repo.core.constants;
+
+public class GenerateNumberObjective {
+
+    public static final String GENERATE_NUMBER_BANK = "Bank Number";
+    public static final String GENERATE_NUMBER_CUSTOMER = "Customer Number";
+    public static final String GENERATE_NUMBER_DOCUMENT_ACCOUNT_TYPE = "Document Account Type Number";
+    public static final String GENERATE_NUMBER_DOCUMENT_TYPE = "Document Type Number";
+    public static final String GENERATE_NUMBER_LODGING_CATEGORY = "Lodging Category Number";
+    public static final String GENERATE_NUMBER_RESTAURANT_TYPE = "Restaurant Type Number";
+    public static final String GENERATE_NUMBER_TRANSPORT_TYPE = "Transport Type Number";
+    public static final String GENERATE_NUMBER_PROGRAM_TYPE = "Program Type Number";
+    public static final String GENERATE_NUMBER_ENTRY = "Entry Number";
+    public static final String GENERATE_NUMBER_SECTOR = "Sector Number";
+    public static final String GENERATE_NUMBER_SERVICE = "Service Number";
+    public static final String GENERATE_NUMBER_SERVICE_CATEGORY = "Service Category Number";
+    public static final String GENERATE_NUMBER_GUIDE = "Guide Number";
+    public static final String GENERATE_NUMBER_PAYMENT_TYPE = "Payment Type Number";
+    public static final String GENERATE_NUMBER_TOURIST_DESTINE = "Tourist Destine Number";
+    public static final String GENERATE_NUMBER_GROUP_PQT_TOURIST = "Group Pqt Tourist Number";
+    public static final String GENERATE_NUMBER_SERVICE_PQT_TOURIST = "Service Pqt Tourist Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_ADMINISTRATIVE = "Supplier Administrative Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_GUIDE = "Supplier Guide Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_AIR_LINE = "Supplier Air Line Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_LODGE = "Supplier Lodge Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_LODGING = "Supplier Lodging Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_OPERATOR = "Supplier Operator Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_RESTAURANT = "Supplier Restaurant Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_TRANSPORT = "Supplier Transport Number";
+    public static final String GENERATE_NUMBER_PROGRAM = "Program Number";
+    public static final String GENERATE_NUMBER_QUOTATION = "Quotation Number";
+    public static final String GENERATE_NUMBER_EMPLOYEE = "Employee Number";
+    public static final String GENERATE_NUMBER_POSITION = "Position Number";
+    public static final String GENERATE_NUMBER_AREA = "Area Number";
+    public static final String GENERATE_NUMBER_COMPANY = "Company Number";
+    public static final String GENERATE_NUMBER_REGISTER_GROUP = "Register Group Number";
+    public static final String GENERATE_NUMBER_REGISTER_GROUP_TYPE_GURU_EXPLORERS = "Register Group Number - Guru Explorers";
+    public static final String GENERATE_NUMBER_REGISTER_BOOKING = "Register Booking Number";
+    public static final String GENERATE_NUMBER_CUPON = "Cupon Number";
+    public static final String GENERATE_NUMBER_CURRENCY = "Currency Number";
+    public static final String GENERATE_NUMBER_TOUR = "Tour Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_INSTITUTION = "Supplier Institution Number";
+    public static final String GENERATE_NUMBER_SUPPLIER_GLAMPING = "Supplier Glamping Number";
+    public static final String GENERATE_NUMBER_ORDER_SERVICE = "Order Service Number";
+    public static final String GENERATE_NUMBER_REQUEST_ORDER_SERVICE = "Request Order Service Number";
+    public static final String GENERATE_NUMBER_PASSENGER_TYPE = "Passenger Type Number";
+    public static final String GENERATE_NUMBER_VOUCHER_INGRESS = "Voucher Ingress Number";
+    public static final String GENERATE_NUMBER_VOUCHER_EGRESS = "Voucher Egress Number";
+    public static final String GENERATE_NUMBER_VOUCHER_EGRESS_DETAIL = "Voucher Egress Detail Number";
+    public static final String GENERATE_NUMBER_COST_SHEET_TWO = "Cost Sheet Two Number";
+    public static final String GENERATE_NUMBER_PROFORMA_NOTE_CRED = "Proforma Note Cred Number";
+    public static final String GENERATE_NUMBER_PROFORMA_INVOICE = "Proforma Invoice Number";
+    public static final String GENERATE_NUMBER_EXPENSE_GUIDE = "Expense Guide";
+}

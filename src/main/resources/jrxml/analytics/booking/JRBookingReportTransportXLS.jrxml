@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JRBookingReportTransportXLS" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="832" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="58ec47b8-d55b-4cc5-ab5f-a87e88cd8e63">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		
+	</parameter>
+	<parameter name="activeUser" class="com.saas.tourismagency.admin.backoffice.domain.security.UserDomain"/>
+	<parameter name="registerGroup" class="java.lang.String"/>
+	<parameter name="date_init_end" class="java.lang.String"/>
+	<parameter name="localidades" class="java.lang.String"/>
+	<parameter name="supplier" class="java.lang.String"/>
+	<parameter name="responsible" class="java.lang.String"/>
+	<parameter name="strDateAperture" class="java.lang.String"/>
+	<parameter name="type_supplier" class="java.lang.String"/>
+	<field name="supplier" class="com.saas.tourismagency.admin.backoffice.domain.base.EntityBaseDomain"/>
+	<field name="cantPax" class="java.lang.Integer"/>
+	<field name="strDate" class="java.lang.String"/>
+	<field name="observation" class="java.lang.String"/>
+	<field name="departmentRegion" class="com.saas.tourismagency.admin.backoffice.domain.base.DepartmentRegionDomain"/>
+	<field name="strServiceComplete" class="java.lang.String"/>
+	<field name="strTime" class="java.lang.String"/>
+	<field name="orderServiceItem" class="com.saas.tourismagency.admin.backoffice.domain.operation.OrderServiceItemDomain"/>
+	<field name="strTimeOrderService" class="java.lang.String"/>
+	<field name="guideTransport" class="com.saas.tourismagency.admin.backoffice.domain.maintenance.GuideDomain"/>
+	<field name="guideTransferDrive" class="com.saas.tourismagency.admin.backoffice.domain.maintenance.GuideDomain"/>
+	<field name="registerGroup" class="com.saas.tourismagency.admin.backoffice.domain.booking.RegisterGroupDomain"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95">
+			<staticText>
+				<reportElement uuid="391009e8-aa33-4160-ae24-cbc55a113b91" x="0" y="0" width="141" height="16" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Legendary Perú S.A.C.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ae621ba9-69f2-4c9f-97e3-7f08ef6071f3" positionType="Float" x="206" y="36" width="381" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[CONTROL DE TRASLADOS - TRANSPORTES]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="604854d9-7085-4d41-842c-020f9216380d" positionType="Float" x="345" y="57" width="252" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{registerGroup}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a145f5f2-497f-4881-82a0-4521a815a154" positionType="Float" x="6" y="57" width="39" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[FECHAS]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="3a0b9849-8f07-42b3-ade7-09e39d05da1d" positionType="Float" x="50" y="57" width="91" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date_init_end}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="17ff6a19-4b72-4cf2-a1a7-df4740ed05fd" positionType="Float" x="306" y="57" width="34" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[GRUPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da811457-de9b-4ff2-98f6-c06944e5fd59" positionType="Float" x="0" y="50" width="831" height="2" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="true" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="23fcd2ae-7d97-4ef8-aa06-062532e5678d" positionType="Float" x="45" y="57" width="5" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d91a0ff5-08d4-4d5a-bf0e-abf4a80db023" positionType="Float" x="340" y="57" width="5" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1af650ae-ff12-4d14-bebb-9e7471ba29b0" positionType="Float" x="306" y="79" width="32" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[LOCAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1e9ba5f8-5cd9-4967-8c35-96e05dc30267" positionType="Float" x="338" y="79" width="5" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="aea005af-11b3-4151-8aed-7c30e2745ebc" positionType="Float" x="343" y="79" width="117" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{localidades}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dab2b0fa-3875-4d8d-b707-afa082f043ad" x="726" y="36" width="33" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="7" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Usuario]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="23bb97eb-c861-431a-be2e-b93144c43406" x="759" y="36" width="72" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{activeUser}.getUserName().toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="fdd12508-1ff0-4ca5-8fbc-5c7d1f365759" x="759" y="0" width="72" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss">
+				<reportElement uuid="1e1e7894-3cfa-4e81-b6b8-bb24b29beaf0" x="759" y="12" width="72" height="12" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1f3ec7a7-99fc-4122-b134-23e3d19aff70" x="726" y="0" width="33" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="7" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9bb4bb31-6b97-4bf5-8b44-51d083407b2c" x="726" y="12" width="33" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="7" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="4b7aff37-2e6e-4491-a5c8-e3de929788ce" x="759" y="24" width="72" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}.toString() + " / " + $V{PAGE_NUMBER}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="6a3acfc6-05d3-45fa-9b94-8b58e9253375" x="726" y="24" width="33" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="7" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Página]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b41e5e70-2302-4cdf-b208-d05ac6243f8a" x="6" y="79" width="45" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="5a47026b-1ecb-48b8-bd4f-4e8ae4c3b74d" positionType="Float" x="56" y="79" width="190" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{supplier}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ca9e5a4b-7d81-4b2f-b44d-e7cc0b60884b" x="51" y="79" width="5" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="be5d2641-9d38-4815-a2d6-043d04f7e62f" positionType="Float" x="745" y="0" width="60" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[GUIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a83fa4d-7256-4a23-b753-ac7ff15acb38" positionType="Float" x="212" y="0" width="18" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[PX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e322598d-14ca-46ac-ad61-59dbec4d3c4b" positionType="Float" x="319" y="0" width="184" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ACTIVIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b4dd33b-1fbd-4490-be85-dbb1d8d4c911" positionType="Float" x="0" y="0" width="95" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OPERADOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b520e95d-b667-4533-8108-34cae3894a39" positionType="Float" x="299" y="0" width="20" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[LOC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2347de14-07a5-4a33-a48c-863e4680e8a2" positionType="Float" x="503" y="0" width="163" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[OBSERVACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2872a0be-9f7d-47a7-b0f1-1c2ba050fd2c" positionType="Float" x="230" y="0" width="45" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5a26f3b8-67ba-43a0-866c-77a4930f7b73" positionType="Float" x="275" y="0" width="24" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ea7ac91a-823d-4adb-9129-db98736c5267" positionType="Float" x="805" y="0" width="27" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5c855801-0a34-4be7-9855-465b9896f79a" positionType="Float" x="691" y="0" width="54" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[TRANS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="558fcec9-3011-4178-9c54-b4a3ad8e3c1e" positionType="Float" x="95" y="0" width="117" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[GRUPO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="62ae10b8-b48c-4eb6-ad5d-16999c34d684" positionType="Float" x="666" y="0" width="25" height="19" forecolor="#000000"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[HORA PAX]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="e9fdb1a8-d1f6-491a-b794-c2d1faceac30" positionType="Float" stretchType="RelativeToTallestObject" x="503" y="0" width="163" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observation}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="02af4634-f175-4e44-af91-fb3851313edf" positionType="Float" stretchType="RelativeToTallestObject" x="275" y="0" width="24" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strTime}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="c5f3b46c-bfbd-4f21-8999-315f82d0f501" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="95" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{supplier}!=null?$F{supplier}.getName():""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="d71a3062-859d-4a85-b7a7-dc15047b600b" positionType="Float" stretchType="RelativeToTallestObject" x="805" y="0" width="28" height="20" forecolor="#000000"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strTimeOrderService}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="21fc7d7a-11f1-4b4b-8849-15c0cf489722" positionType="Float" stretchType="RelativeToTallestObject" x="230" y="0" width="45" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="48e44adc-0e26-4580-83b2-461194b90a08" positionType="Float" stretchType="RelativeToTallestObject" x="745" y="0" width="60" height="20" forecolor="#000000"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guideTransferDrive}!=null?$F{guideTransferDrive}.getName():""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="6ab0f6fe-3c60-470f-8ba0-734b30ff082d" positionType="Float" stretchType="RelativeToTallestObject" x="691" y="0" width="54" height="20" forecolor="#000000"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{guideTransport}!=null?$F{guideTransport}.getName():""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="513f8198-21ba-46cc-9195-8bfeffbc0dfc" positionType="Float" stretchType="RelativeToTallestObject" x="212" y="0" width="18" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantPax}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="926be447-4ff3-415f-b848-56de20182a85" positionType="Float" stretchType="RelativeToTallestObject" x="319" y="0" width="184" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{strServiceComplete}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="09900dee-ac1b-412e-af56-a4c27d73a928" positionType="Float" stretchType="RelativeToTallestObject" x="299" y="0" width="20" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{departmentRegion}!=null?$F{departmentRegion}.getStrAbrevName():""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="afc5a86b-7285-4349-80dd-481db45d3e1d" positionType="Float" stretchType="RelativeToTallestObject" x="95" y="0" width="117" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{registerGroup}!=null?$F{registerGroup}.getName():""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement uuid="2a613c4d-227f-4ee0-b8ef-0168d5eb5398" positionType="Float" stretchType="RelativeToTallestObject" x="666" y="0" width="25" height="20" forecolor="#000000"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{orderServiceItem}!=null?$F{orderServiceItem}.getStrDateTimePax():""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="bd3d87fd-42f0-4ece-b048-a8109145468e" x="6" y="4" width="99" height="12" forecolor="#000000"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="SansSerif" size="7" isBold="true" isStrikeThrough="false" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Sistema de Reservas]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

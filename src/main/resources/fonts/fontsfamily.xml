@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+    <fontFamily name="Arial">
+        <!-- Normal Arial Font -->
+        <normal><![CDATA[fonts/arial/arial.ttf]]></normal> <!-- location of the nornal font on resource folder -->
+        <!-- Bold Arial Font -->
+        <bold><![CDATA[fonts/arial/arialbd.ttf]]></bold>
+        <!-- Italic Arial Font -->
+        <italic><![CDATA[fonts/arial/ariali.ttf]]></italic>
+        <!-- Bolt italic Arial Font -->
+        <boldItalic><![CDATA[fonts/arial/arialbi.ttf]]></boldItalic>
+        <!-- Is font is embedded in PDF -->
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+    </fontFamily>
+    <fontFamily name="Arial Black">
+        <!-- Normal Arial Font -->
+        <normal><![CDATA[fonts/arialblack/arial_black.ttf]]></normal> <!-- location of the nornal font on resource folder -->
+        <!-- Is font is embedded in PDF -->
+        <pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+    </fontFamily>
+</fontFamilies>

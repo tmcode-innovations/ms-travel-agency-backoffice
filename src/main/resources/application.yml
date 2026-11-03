@@ -1,0 +1,79 @@
+#Application Properties
+application:
+  name: ms-travel-agency-backoffice
+  datasource:
+    mongodb:
+      host: 'localhost'
+      port: 27017
+      database: 'db_ms_travel_agency_backoffice'
+      username: 'useradmin'
+      password: 'Rootunix'
+      authentication-database: 'admin'
+      replica-set-name: 'rs0'
+  server:
+    port: 8084
+  openapi:
+    dev-url: 'http://localhost:8084/ms-travel-agency-backoffice'
+  secret:
+    passwordhash: '12345'
+    jwt:
+      token:
+        validity: 43200 #12 hours for expiration
+        secret: 'afafasfafafasfasfasfafacasdasfasxASFACASDFACASDFASFASFDAFASFASDAADSCSDFADCVSGCFVADXCcadwavfsfarvf'
+  apikey:
+    authtoken: 'apikeysclave1234'
+#Spring Properties
+spring:
+  data:
+    mongodb:
+      host: ${application.datasource.mongodb.host}
+      port: ${application.datasource.mongodb.port}
+      database: ${application.datasource.mongodb.database}
+      username: ${application.datasource.mongodb.username}
+      password: ${application.datasource.mongodb.password}
+      authentication-database: ${application.datasource.mongodb.authentication-database}
+      replica-set-name: ${application.datasource.mongodb.replica-set-name}
+
+  mvc:
+    favicon:
+      enabled: false
+  servlet:
+    load-on-startup: 1
+  output:
+    ansi:
+      enabled: always
+
+#Server Properties
+server:
+  port: ${application.server.port}
+  servlet:
+    context-path: '/ms-travel-agency-backoffice/api/v1'
+    multipart:
+      enabled: true
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  tomcat:
+    connection-timeout: 3600s
+    max-swallow-size: -1
+
+springdoc:
+  swagger-ui:
+    path: /backoffice-documentation
+    try-it-out-enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+    filter: true
+  api-docs:
+    path: /backoffice-api-docs
+  packages-to-scan: com.saas.tourismagency.admin.backoffice.adapter.entrypoints.restapi.v1.controller
+
+# Show details of health endpoint
+management:
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  file:
+    name: /var/log/saas-application/application.log
+    path: /var/log/saas-application/

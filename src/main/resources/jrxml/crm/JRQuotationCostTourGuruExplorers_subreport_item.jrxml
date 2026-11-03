@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JRQuotationCostTourGuruExplorers_subreport_item" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3ab8ae45-047b-41c9-83ee-f140a3dadbfb">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="currency" class="com.saas.tourismagency.admin.backoffice.domain.account.CurrencyDomain"/>
+	<parameter name="amount" class="java.lang.Double"/>
+	<parameter name="JRDetail_subreport_item_other_internal" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="JRDetail_subreport_item_other_internal_1" class="net.sf.jasperreports.engine.JasperReport"/>
+	<field name="tour" class="com.saas.tourismagency.admin.backoffice.domain.crm.TourDomain"/>
+	<field name="numMaxPax" class="java.lang.Integer"/>
+	<field name="subTotalAmount" class="java.lang.Double"/>
+	<field name="itineraryDate" class="com.saas.tourismagency.admin.backoffice.domain.crm.ItineraryDateDomain"/>
+	<field name="items" class="java.util.List"/>
+	<field name="additionalItems" class="java.util.List"/>
+	<field name="name" class="java.lang.String"/>
+	<group name="Group1">
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="16"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="87" y="0" width="227" height="27" forecolor="#FFFFFF" backcolor="#333E4F" uuid="a764a5b5-f959-4f29-afdd-abdd31660330"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="-1" y="0" width="88" height="27" forecolor="#FFFFFF" backcolor="#333E4F" uuid="2013f7a0-5408-4dfe-a6ac-7c83e8866353"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="314" y="0" width="85" height="27" forecolor="#FFFFFF" backcolor="#333E4F" uuid="e3f0edc6-565b-4ad2-b82b-16213548070d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Personas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="467" y="0" width="88" height="27" forecolor="#FFFFFF" backcolor="#333E4F" uuid="b1dc5369-a6b1-4438-8041-a2ff0f631594"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="398" y="0" width="69" height="27" forecolor="#FFFFFF" backcolor="#333E4F" uuid="f3f14289-1d74-4b0e-a0ec-dc1b3219c643"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio Unitario]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="87" y="0" width="226" height="12" uuid="30a9a182-88b0-4ee8-8260-9a48b9972fc7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement x="-1" y="0" width="88" height="12" uuid="de1f4edb-60df-46de-9cb1-1e06da00506d"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="8" isBold="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itineraryDate}.getItineraryDateString()]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="12">
+			<subreport>
+				<reportElement stretchType="RelativeToTallestObject" x="87" y="0" width="467" height="12" uuid="45365795-50fc-47e8-9a65-2b067816cd54">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{items})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{JRDetail_subreport_item_other_internal}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

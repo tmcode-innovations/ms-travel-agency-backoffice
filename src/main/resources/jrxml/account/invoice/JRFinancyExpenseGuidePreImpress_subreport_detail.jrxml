@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JRFinancyExpenseGuidePreImpress_subreport_detail" language="groovy" pageWidth="620" pageHeight="802" columnWidth="620" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3ab8ae45-047b-41c9-83ee-f140a3dadbfb">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="daterelationexcursion" class="java.lang.String"/>
+	<field name="hourrelationexcursion" class="java.lang.String"/>
+	<field name="service" class="java.lang.String"/>
+	<field name="transport" class="java.lang.String"/>
+	<field name="nropax" class="java.lang.String"/>
+	<field name="mountunit" class="java.lang.String"/>
+	<field name="subtotalsoles" class="java.lang.String"/>
+	<field name="subtotalusd" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="8b1092fe-815e-428c-9e10-eb99ed4e555e" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="81" height="10"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dotrice Condensed" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{daterelationexcursion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="e16284d5-718d-4307-91d0-8d3a9e5254c0" positionType="Float" stretchType="RelativeToTallestObject" x="570" y="0" width="48" height="10"/>
+				<box leftPadding="0" rightPadding="2">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dotrice Condensed" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subtotalsoles}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="8ef7a1f6-e7ae-42c2-aa98-746f672a6d95" positionType="Float" stretchType="RelativeToTallestObject" x="81" y="0" width="79" height="10"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dotrice Condensed" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hourrelationexcursion}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="1f450635-ed02-4fac-b02c-4884b1a2ce51" positionType="Float" stretchType="RelativeToTallestObject" x="160" y="0" width="303" height="10"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dotrice Condensed" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{service}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="63767983-680f-4461-ac7c-56813a7e92f5" positionType="Float" stretchType="RelativeToTallestObject" x="506" y="0" width="64" height="10"/>
+				<box leftPadding="0" rightPadding="2">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dotrice Condensed" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mountunit}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="edbc8551-c53f-42a7-8ded-ff5ff98e07dc" positionType="Float" stretchType="RelativeToTallestObject" x="463" y="0" width="43" height="10"/>
+				<box leftPadding="0" rightPadding="2">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dotrice Condensed" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nropax}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

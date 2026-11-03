@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="JRBookingCuponAllGlamping_subreport_detail" pageWidth="540" pageHeight="802" columnWidth="540" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3ab8ae45-047b-41c9-83ee-f140a3dadbfb">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="nightLodging" class="java.lang.String"/>
+	<field name="dateInit" class="java.lang.String"/>
+	<field name="dateEnd" class="java.lang.String"/>
+	<field name="rooms" class="java.lang.String"/>
+	<field name="foods" class="java.lang.String"/>
+	<field name="dinner" class="java.lang.String"/>
+	<field name="lunch" class="java.lang.String"/>
+	<field name="breakfast" class="java.lang.String"/>
+	<field name="category" class="java.lang.String"/>
+	<field name="observation" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="122" splitType="Stretch">
+			<textField textAdjust="StretchHeight" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="203" y="16" width="55" height="11" uuid="a79244c9-c016-4b71-898c-34d888fb16fc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateEnd}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="79" y="16" width="52" height="11" uuid="707c6991-e128-4bc3-ac95-7383a7e79f23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dateInit}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="244" y="3" width="141" height="11" forecolor="#000000" uuid="1cab0bd0-7bff-4b7e-a563-e81eb87c3ec2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[NOCHE(S) DE ALOJAMIENTO]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" pattern="" isBlankWhenNull="true">
+				<reportElement x="232" y="3" width="12" height="11" uuid="c742b014-c09a-48d0-aa03-fb2a867e4aa9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nightLodging}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="131" y="16" width="72" height="11" forecolor="#000000" uuid="c458e95a-8741-46ef-82ad-cbf46429efdf"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[HASTA EL DIA :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="86" width="254" height="19" forecolor="#000000" uuid="bea73538-437f-4238-b2fb-ee4d832da47d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[EXPORTACION DE SERVICIOS D.L.No.919]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="3" width="221" height="11" forecolor="#000000" uuid="b26b4fb8-c93d-4d6f-8bcc-bfe9cc07afc2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[FAVOR PROVEER LOS SIGUIENTES SERVICIOS :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="16" width="69" height="11" forecolor="#000000" uuid="836a7540-3238-4e69-ac9e-51f159d01ceb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[DESDE EL DIA :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="42" width="101" height="11" forecolor="#000000" uuid="5a2536c9-bf40-47c2-b61d-7df6c1be4ecd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[ALIMENTACION]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" pattern="" isBlankWhenNull="true">
+				<reportElement x="117" y="29" width="412" height="11" uuid="14cb54b5-4b1b-4c25-a62f-7be0ff8f5a67"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rooms} + " " + ( $F{category} != null ? $F{category} : "" )]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" pattern="" isBlankWhenNull="true">
+				<reportElement x="117" y="42" width="412" height="11" uuid="74c338ad-55a2-425a-9319-3a967672b1fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{foods}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="111" y="42" width="6" height="11" forecolor="#000000" uuid="eacbf69e-1252-45cc-b29a-78f599437998"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="29" width="6" height="11" forecolor="#000000" uuid="b91d6fef-ace9-48a1-856d-753615b85e7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isStrikeThrough="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="29" width="101" height="11" forecolor="#000000" uuid="a71b7c40-9010-4fee-9116-921c54e2fce8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[HABITACIONES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="107" width="33" height="12" forecolor="#000000" uuid="7d46b501-5fde-4383-8fbb-aa05d6ebd154"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[OBS:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" pattern="" isBlankWhenNull="true">
+				<reportElement x="51" y="107" width="439" height="12" uuid="9c50895e-672c-44a4-87d2-3cd320cf777d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="false" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="64" width="185" height="20" uuid="6b43cbb5-b065-4e17-8ab0-6a1e2143bdb4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
